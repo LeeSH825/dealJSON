@@ -1,0 +1,36 @@
+"if": {
+	"position" : 0,
+
+	"and" : true,
+
+	"FirmInfo": {
+		"Code": "A0005930",
+		"type": "open",
+		"timestamp": [-3, -1]
+	},
+	">=": true,
+	"FirmInfo" : {
+		"Code": "A0005930",
+		"type": "close",
+		"timestamp": [-3, -1]
+	},
+
+	 "and" : "true",
+
+	 "FirmInfo" : {
+		"Code": "A0005930",
+		"type": "close",
+		"timestamp": [-1]
+	},
+	">=": true,
+	"Feature": {
+		"type": "ma20",
+		"TimeStamp" : -1
+	}
+
+},
+"then": {
+	"act": "sell",
+	"firmCode": ["A0005930"],
+	"value": 500
+}
